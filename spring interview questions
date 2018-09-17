@@ -1,0 +1,181 @@
+Q1. What is Spring?
+Spring is an open source framework which reduces the complexity of enterprise application development. Spring makes Java application simple, improves testability and provide loose coupling between components.
+
+Q2. What do you understand by Spring Framework?
+With the two core concepts of Aspect-Oriented and Dependency Injection, Spring is one of the most popular and widely used Java EE frameworks. Through dependency injection it can provide tight coupling between various components. The cross-cutting tasks such as authentication and logging can be provided through Spring framework and the aspect-oriented programming can be implemented through this as well.
+Spring framework is a featured framework which can provide several modules and lots of features for the specific tasks such as Spring JDBC and Spring MVC. Working with Spring is quite easy and a fun activity due to the presence of a number of online communities and resources.
+
+Q3. What are the features of spring?
+1.Lightweight
+2.Inversion of control (IOC)
+3. Aspect-oriented (AOP)
+4.Container
+5.MVC Framework
+6.JDBC Exception Handling
+7.Transaction Management
+
+Q4. What is JDBC abstraction and DAO module?
+To keep database code clean and simple we use JDBC abstraction and DAO module and also prevent problems that result from a failure to close database resources. It also makes use of Spring’s AOP module to provide transaction management services for objects in a Spring application.
+
+Q5. Why Spring is lightweight?
+The entire Spring framework can be distributed in a single jar file of 2.5 MB approximately. The Spring framework requires very little memory for overhead processing (program execution, memory & bandwidth allocation) compared to other enterprise applications.
+
+Q6. What is dependency injection?
+Dependency injection is a concept which is implemented through the design patterns. It can remove the hard-coded dependency and can make the application loosely coupled, maintainable and extendable. The dependency resolution can also be moved from compile time to run time through these design patterns. It provides following benefits:
+
+1.Boilerplate Code Reduction
+2.Separation of Concerns
+3.Easy Unit Testing
+4.ConfigurableComponents
+Google Guice can also be used for dependency injection and the processes can be automated through this. If we want to implement any additional concept along with dependency injection then Spring is the best choice for that.
+
+Q7. How do you provide Configuration metadata to the Spring Container?
+There are three important methods to provide configuration metadata to the Spring Container. They are
+XML based configuration file
+1.Annotation based Configuration
+2.Java-based configuration
+
+Q8. Describe some standard Spring Event?
+Spring provides the following standard events:
+Context Refreshed Event: This event is published when the Application Context is either initialized or refreshed. This can also be raised using the refresh () method on the Configurable Application Context interface.
+Context Started Event: This event is published when the Application Context is started using the start () method on the Configurable Application Context interface. The user can poll their database or they can re/start any stopped application after receiving this event.
+Context Stopped Event: This event is published when the Application Context is stopped using the stop () method on the Configurable Application Context interface. The users can do required housekeep work after receiving this event.
+Context Closed Event: This event is published when the Application Context is closed using the close () method on the Configurable Application Context interface. A closed context reaches its end of life; it cannot be refreshed or restarted.
+Request Handled Event: This is a web-specific event telling all beans that an HTTP request has been serviced.
+
+Q9.What do you think the biggest advantage of working with Spring is?
+The transaction management interface is consistent, which means that there’s no need to worry about scaling. The program works the same — whether it’s global or local.
+The interviewer is looking to see what you value in a program.
+
+Q10. What is Inversion of control(IoC)/Dependency Injection(DI)?
+Spring provides loose coupling through Inversion of control (IoC), also known popularly among developers as Dependency Injection (DI). When we use IoC, container given the dependencies passively to an object rather than an object looking for its dependencies from a container. During instantiation, container gives all the dependencies associated with an object without waiting for the object to make a formal request.
+
+Q11. Name some popular and mostly used Spring Modules.
+Some important and mostly used Spring modules are:
+Spring Context- Used for Dependency Injection
+Spring AOP- Used to implement aspect-oriented programming
+Spring DAO- Used for database operations with the help of DAO patterns
+Spring JDBC- uSed for DataSource and JDBC support
+Spring ORM- Used for creating web applications
+Spring Web Module- Used to create the web applications
+Spring MVC- It is also known as Model-View-Controller used to create and implement the web applications
+
+Q12. Define Auto Wiring?
+AutoWiring is used to build relationship between the collaborating beans. Spring container can automatically resolve collaborators for beans. There is @Autowired annotation provides more fine-grained control over where and how autowiring should be accomplished. This annotation can be used to autowire bean on the setter method just like @Required annotation,constructor,a property or methods with arbitrary names and/or multiple arguments.
+
+Q13. What are the types of Dependency injection Spring supports?
+Setter Injection
+Setter-based DI is realized by calling setter methods on the user’s beans after invoking a no-argument constructor or no-argument static factory method to instantiate their bean.
+Constructor Injection
+Constructor-based DI is realized by invoking a constructor with a number of arguments, each representing a collaborator.
+
+Q14. How do you maintain your technical expertise?
+Since the field is constantly changing, it is of course important to keep up one’s knowledge. For this purpose, I do a couple of things. For one, I make sure to take continuing education classes. I also try to read up on books and magazines. Then of course there are conferences — I try and go to at least one or two a year, since they can be so educational.
+The interviewer wants to makes sure that you’re willing to maintain your expertise.
+
+Q15. Explain the advantages of Spring?
+With the help of Spring we can make our application code less dependent on framework.
+It promotes pluggability: With Spring you can think of application objects as named services. Thus you can swap one service for another without affecting the rest of the application.
+Provides good programming practices: Using an IoC container like Spring reduces the complexity of coding to interfaces, rather than classes.
+Spring applications are easy to test: Application objects will generally be POJOs and POJOs are easy to test.
+Reusing existing components: Spring does not introduce its own solution in areas such as ORM, logging, connection pool or other system services. But, spring makes sure that these components are significantly easier to use.
+
+Q16. What is Spring Bean?
+Any class of Spring framework, which is initialized by Spring IoC container is known as Spring Bean. We can get the Spring Bean instance through Spring Application Context. The life-cycle of Spring Bean can be managed by Spring IoC container.
+
+Q17. What are the advantages of Spring AOP?
+The advantages of Spring AOP are:
+It increases the modularity and the key unit is Aspect
+AOP breaks the program logic into distinct parts
+It provides the pluggable way to dynamically add the additional concern before,after or around the actual logic.
+
+Q18.What is Spring IOC container?
+The Spring IOC creates the objects, wire them together, configure them, and manage their complete lifecycle from creation till destruction. The spring container uses dependency injection (DI) to manage the components that make up an application.
+
+Q19. Where do you find motivation?
+I love my job. That’s all the motivation I need.
+The interviewer wants to see that you’re a self-starter.
+
+Q20. What is Aspect Oriented Programming (AOP)?
+Spring provides AOP which enables cohesive application development due to the clear demarcation of business logic from other crosscutting concern, such as auditing, logging and transaction management. Due to this clear separation, application objects perform only business logic and not concerned about the system concerns such as logging or transaction support.
+
+Q21. Define Spring Bean Scope
+Following five are the main scopes of Spring Beans:
+Prototype: Whenever a bean is requested a separate prototype is created each time
+Request: It is quite like prototype scope while used for web applications only. For each HTTP request a new bean instance is created.
+Singleton: For every container only one instance of the bean is created and they act as the default scope for the bean containers. In these instances the beans cannot have shared instance variables. As these instances are not threaded safe so can lead to data-inconsistency.
+Session: For every HTTP session a bean is created by the containers
+Global-session: For Portlet applications the global session is created
+
+The Spring framework is extendable user can also create his own scope as well. While the Spring defined scope is also used by the developers. The “scope” attribute of the bean element is used to define its scope.
+The above-listed ones are mostly asked for spring MVC interview questions and answers. Apart from these there can be other spring MVC interview questions as well. You can find other questions to clear the interview.
+
+Q22. What is Autoproxying?
+Autoproxying is used to create proxy automatically for the spring users. It provides following two classes to support this automatic proxy creation. There are different types of AutoProxying. They are
+1.BeanNameAutoProxyCreator
+2.DefaultAdvisorAutoProxyCreator
+3.MetadataAutoProxying
+
+Q23. What is Context Loader Listeners?
+Context Loader Listener is the listener class used to load root context and define spring bean configurations that will be visible to all other contexts. It’s configured in web.xml file as:
+
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/spring/root-context.xml</param-value>
+</context-param>
+<listener>
+<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+Q24. Explain the difference between concern and crosscutting concern in Spring AOP?
+The concern can be defined as a functionality/feature a programmer wants to implement to address a specific business problem. For example, In eCommerce applications a concern can be stock management, shipping management etc.
+Crosscutting concern is a concern than span across almost all modules of an application. For example, logging, security etc.
+
+Q25. Why is Spring Bean configuration file important?
+All beans that are initialized by Spring Context are defined in Spring Bean configuration file. When an instance of Spring Application Context is created it reads spring bean XML file and initializes all of them. The context is initialized once in the bean life cycle and then it can be used to get different bean instances throughout its lifecycle.
+This file not only contains Spring Bean configuration instead it also contains Spring MVC view resolvers, interceptors and other annotations which can support other configuration based elements.
+
+Q26. What is DAO in Spring?
+DAO is used to provide integration of java database connectivity and Object relational mapping objects. DAO is spring framework provides connection for JDBC,hibernate,JDO,JPA,Common client interface and Oracle.The database code can be kept clean and simple by using the DAO module.Also,DAO module utilizes the AOP module to enable objects in the Spring application to use transaction management services.
+
+Q27. What is Aspect?
+An aspect can be defined as modularization of a crosscutting concern. For example, a logging module would be called AOP aspect for logging.
+
+Q28. Explain various types of Spring Bean Auto wiring.
+In Spring framework following four types of autowiring is defined:
+1. Autowire byname
+2. Autowire byType
+3. Autowire by constructor
+4. Autowire by @Autowired and @Qualifier annotations
+
+Q29. What is Joinpoint?
+The Joinpoint is defined as the point in your application where we inject aspects. Usually when we write a method for executing a business logic, aspects are plugged in at following Joinpoints.
+Before the start of business logic method
+Once business logic method end
+When business logic throws exception
+
+Q30. What are the ways to access Hibernate by using Spring?
+There are two ways to access Hibernate with Spring: They are
+Inversion of Control with a Hibernate Template and CallbackExtending HibernateDAOSupport and Applying an AOP interceptor node.
+
+Q31. What is Advice?
+It is the actual action taken up by an aspect at a particular Joinpoint before or after the method execution. It is the actual piece of code that get executed by the Spring AOP framework during the execution of a program.
+
+Q32. Explain Web application content?
+The Web Application Context is an extension of the plain Application Context. It has some extra features that are necessary for web applications. It differs from a normal Application Context in terms of its capability of resolving themes and in deciding which servlet it is associated with.
+
+Q33. What are the different types of advices?
+Spring AOP support following type of advices
+
+Before advice : Run an advice before a method executes.
+After advice: Run advice after a method executes.
+After returning advice: Run advice on successful execution of a method.
+After throwing advice: Run advice if a method throws an exception.
+Around advice: Run advice before the methods and it can make a decision on whether the original method can be called or not
+Q34. What are the minimum configurations needed to create spring MVC application?
+For creating a simple Spring MVC application, we need to do following tasks.
+
+1.Add spring-context and spring-web MVC dependencies in the project.
+2.Configure Dispatcher Servlet in the web.xml file to handle requests through spring container.
+3.Spring bean configuration file to define beans, if using annotations then it has to be configured here. Also, we need to configure view resolver for view pages.
+4.Controller class with request mappings defined to handle the client requests
